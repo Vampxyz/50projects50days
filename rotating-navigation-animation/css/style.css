@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+:root {
+    /* Cores principais */
+    --main-bg: #333333;
+    --main-text: #222222;
+    --accent-color: #ff7979;
+    --secondary-bg: #fafafa;
+    --secondary-text: #5567a0;
+
+    /* Tipografia */
+    --font-primary: 'Lato', sans-serif;
+    --font-secondary: '', serif;
+    --font-size-base: 16px;
+    --line-height: 1.6;
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    font-family: var(--font-primary);
+    line-height: var(--line-height);
+
+    height: 100vh;
+    width: 100vw;
+
+
+    overflow-x: hidden;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Circle */
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    z-index: 9999;
+}
+.circle-container .circle {
+    position: relative;
+    background-color: var(--accent-color);
+    
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: rotate 1s ease;
+}
+.circle-container .circle i {
+    color: var(--secondary-bg);
+    font-size: 1.5rem;
+    position: absolute;
+    cursor: pointer;
+}
+.circle-container .circle #close {
+    left: 50px;
+    bottom: 35px;
+}
+.circle-container .circle #open {
+    right: 50px;
+    bottom: 35px;
+}
+
+#container {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--secondary-bg);
+    color: black;
+
+    padding: 24px;
+    position: fixed;    
+
+    transition: all 1s ease;
+    overflow-y: scroll;
+    overflow: visible;
+    
+    
+}
+
+
+/* Main */
+#container main {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: column;
+    
+    max-width: 55%;
+    
+    margin-top: 48px;
+    padding: 16px;
+    overflow-y: scroll;
+    overflow: visible;
+
+}
+
+/* Título */
+#container main .title {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    line-height: normal;
+}
+main .title small {
+    font-style: italic;
+}
+
+#container main .mydog {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Nav */
+nav {
+    color: var(--secondary-bg);
+    position: absolute;
+    left: -5%;
+    bottom: 10%;
+    transition: left .7s ease;
+}
+nav ul {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+nav ul li {
+    font-size: 1.4rem;
+    position: relative;
+    transition: all .7s ease;
+}
