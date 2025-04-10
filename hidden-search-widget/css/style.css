@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+:root {
+  /* Cores principais */
+  --main-bg: #795df7;
+  --main-text: #;
+  --accent-color: #;
+  --secondary-bg: #745ae9;
+  --secondary-text: #;
+
+  /* Tipografia */
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "", serif;
+  --font-size-base: 16px;
+  --line-height: 1.6;
+}
+
+body {
+  background: linear-gradient(90deg, var(--main-bg), var(--secondary-bg));
+  color: var(--main-text);
+  font-family: var(--font-primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+#search {
+  display: flex;
+  overflow: hidden;
+}
+
+/* Input */
+#search input {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+
+  width: 0px;
+  transition: all 0.5s ease;
+}
+/* hide clear button */
+#search input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* Button */
+#search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0.8rem;
+
+  cursor: pointer;
+
+  background-color: #ffffff;
+}
+#search button i {
+  font-weight: bold;
+  font-size: 25px;
+
+  margin: 0;
+  padding: 0;
+}
