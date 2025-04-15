@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+:root {
+    /* Cores principais */
+    --main-bg: #4682b4;
+    --main-text: #ffffff;
+    --accent-color: #;
+    --secondary-bg: #2a4e6c;
+    --secondary-text: #add8e6;
+    --button-bg: #add8e6;
+
+    /* Tipografia */
+    --font-primary: 'Muli', sans-serif;
+    --font-secondary: '', serif;
+    --font-size-base: 16px;
+    --line-height: 1.6;
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    font-family: var(--font-primary);
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container */
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 32px;
+
+    width: 380px;
+    height: 435px;
+
+    padding: 2.5rem;
+
+    border-radius: 6px;
+
+    background-color: var(--secondary-bg);
+}
+
+/* Form */
+#container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+}
+#container form .form-controler {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Input */
+form .form-controler input {
+    width: 100%;
+
+    border-bottom: #fff 2px solid;
+    padding-bottom: 8px;
+
+    font-size: 1.2rem;
+    color: white;
+
+    background-color: none;
+    background: none;
+
+    position: relative;
+    left: 0;
+}
+form .form-controler input:focus {
+    border-bottom: var(--button-bg) 2px solid;
+}
+
+/* Label */
+form .form-controler label {
+    font-size: 1.1rem;
+
+    position: absolute;
+    left: 0;    
+}
+
+/* Span */
+form .form-controler label span {
+    display: inline-block;
+
+    transform: translateY(0);
+    transition: transform .15s ease-in-out, color .3s ease;
+}
+
+form .form-controler input:focus ~ label span,
+form .form-controler input:not(:placeholder-shown) ~ label span {
+    transform: translateY(-25px);
+    color: var(--button-bg);
+}
+
+/* Button */
+#container .btn {
+    width: 100%;
+
+    padding: 1rem 0;
+
+    border-radius: 8px;
+
+    font-size: 1.1rem;
+
+    background-color: var(--button-bg);
+}
+/* Link */
+#container .text a {
+    color: var(--button-bg);
+}
+
