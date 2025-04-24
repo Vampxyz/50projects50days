@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+:root {
+    /* Cores principais */
+    --main-bg: #f0f0f0;
+    --main-text: #000;
+    --accent-color: #9fa4a8;
+
+    /* Tipografia */
+    --font-primary: 'Muli', sans-serif;
+    --font-size-base: 16px;
+    --line-height: 1.6;
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    font-family: var(--font-primary);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    min-height: 100vh;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#title {
+    margin-top: 32px;
+}
+
+#faq-container {
+    display: flex;
+    gap: 16px;
+    flex-direction: column
+}
+#faq-container .faq {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    position: relative;
+
+    width: 600px;
+    height: 80px;
+
+    overflow: hidden;
+
+    background-color: transparent;
+
+    border: 1px solid var(--accent-color);
+    border-radius: 16px;
+    
+    padding: 24px;
+
+    transition: height 0.3s ease;
+}
+#faq-container .faq h1 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--main-text);
+
+    position: absolute;
+    top: 30px;
+}
+#faq-container .faq p {
+    font-size: 14px;
+    font-weight: 400;
+
+    position: absolute;
+    top: 80px;
+}
+
+#faq-container .faq .action {
+    cursor: pointer;
+
+    background-color: transparent;
+    background: transparent;
+    
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.action i {
+    font-size: 16px;
+}
