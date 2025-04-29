@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+:root {
+    /* Cores principais */
+    --main-bg: #2b88f0;
+    --main-text: #ffffff;
+
+    /* Cores secundárias */
+    --secondary-bg: #f0932b;
+    --secondary-text: #ffffff;
+
+    /* Tipografia */
+    --font-primary: 'Muli', sans-serif;
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    font-family: var(--font-primary);
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1 {
+    font-size: 1.4rem;
+    max-width: 500px;
+    text-align: center;
+}
+
+textarea {
+    width: 600px;
+    height: 150px;
+
+    padding: 16px;
+    border-radius: 8px;
+
+    font-size: 1.15rem;
+    font-weight: 500;
+    font-family: var(--font-primary);
+}
+
+#tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    max-width: 600px;
+}
+#tags .tag {
+    background-color: var(--secondary-bg);
+    
+    color: var(--secondary-text);
+    font-weight: 500;
+    font-size: 1rem;
+
+    padding: 10px 20px;
+    border-radius: 50px;
+    
+    cursor: default;
+}
